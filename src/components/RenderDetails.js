@@ -3,6 +3,7 @@ import React from 'react'
 
 function RenderDetails({details, onDelete}) {
 
+// DELETE request
   function handleDelete(number){
     fetch(`http://localhost:3001/people/${number}`, {
       method: "DELETE"
@@ -12,6 +13,7 @@ function RenderDetails({details, onDelete}) {
 
   return (
     <>
+    {/* iterating over the 'details' array */}
     {details.map(detail => (
         <div key={detail.number} id="details">
             <p>First Name: {detail.firstName}</p> 
@@ -26,4 +28,5 @@ function RenderDetails({details, onDelete}) {
   )
 }
 
+// exporting renderdetails
 export default RenderDetails

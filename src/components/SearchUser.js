@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 
+// handling the search action when the user enters a search term.
 function SearchUser({onSearchUSer}) {
 
+// creating a state variable called 'searchTerm' and a function called 'setSearchTerm' to update the 'searchTerm' state. 
     const [searchTerm, setSearchTerm] = useState("")
    
     function handleSubmit(e){
@@ -11,6 +13,7 @@ function SearchUser({onSearchUSer}) {
     }
 
   return (
+    //form element that triggers the 'handleSubmit' function when it is submitted.
     <form onSubmit={handleSubmit}>
         <label htmlFor='search'>Search: </label>
         <input
@@ -21,5 +24,5 @@ function SearchUser({onSearchUSer}) {
     </form>
   )
 }
-
+// exporting searchuser
 export default SearchUser

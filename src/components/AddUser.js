@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 function AddUser({onAddNewUser}) {
+    // creating a state variable called 'newUser' and a function called 'setNewUser' to update the 'newUser' state.(useState hook)
     const [newUser, setNewUser] = useState({
         firstName: "",
         lastName: "",
@@ -8,6 +9,8 @@ function AddUser({onAddNewUser}) {
         age: "",
         number: ""
     })
+
+    // calling the function when the form is submitted.
     function handleSubmit(e){
         e.preventDefault()
         console.log(newUser)
@@ -20,7 +23,7 @@ function AddUser({onAddNewUser}) {
             number: ""
         })
     }
-
+// returning JSX
   return (
     <form onSubmit={handleSubmit}>
         <h2>Add user:</h2>
@@ -72,5 +75,5 @@ function AddUser({onAddNewUser}) {
     </form>
   )
 }
-
+// exporting adduser
 export default AddUser
